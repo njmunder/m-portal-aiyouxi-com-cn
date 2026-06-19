@@ -1,2 +1,39 @@
-# m-portal-aiyouxi-com-cn
-爱游戏 - https://m-portal-aiyouxi.com.cn
+# 爱游戏 - 游戏资讯与服务平台
+
+## 简介
+
+**爱游戏**是一个专注于游戏资讯、攻略分享与玩家交流的网站，通过 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn) 提供服务。该平台致力于为游戏爱好者提供及时、全面的游戏相关内容，帮助玩家发现好游戏、提升游戏体验。
+
+无论您是寻找最新游戏动态、深度攻略，还是希望与其他玩家互动，爱游戏都为您提供了一个便捷的入口。访问 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn) 即可开始探索。
+
+## 特点
+
+- **游戏资讯**：涵盖多平台游戏的新闻、更新与活动信息，帮助玩家掌握行业动态。
+- **攻略资源**：提供实用的游戏攻略、技巧与心得，助力玩家攻克难关。
+- **社区交流**：玩家可以分享观点、讨论游戏内容，形成活跃的爱好者社群。
+- **移动端友好**：网站针对移动设备优化，方便随时随地访问 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn)。
+
+## 访问方式
+
+您可以通过以下方式访问爱游戏：
+
+- **直接访问**：在浏览器中输入 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn)。
+- **移动端浏览**：使用手机或平板设备打开上述链接，获得适配的浏览体验。
+
+## 适用人群
+
+爱游戏适合所有对电子游戏感兴趣的玩家，包括但不限于：
+
+- 寻找游戏资讯和评测的玩家
+- 需要游戏攻略和技巧的爱好者
+- 希望参与游戏讨论的社群成员
+
+## 注意事项
+
+- 爱游戏仅提供游戏相关信息和交流平台，不涉及任何违规或误导性内容。
+- 请遵守平台规则，共同维护健康、友善的社区环境。
+- 如有任何问题或建议，可通过 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn) 上的联系方式反馈。
+
+---
+
+**立即访问 [https://m-portal-aiyouxi.com.cn](https://m-portal-aiyouxi.com.cn)，加入爱游戏，开启您的游戏探索之旅！**

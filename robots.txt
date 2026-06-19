@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://njmunder.github.io/m-portal-aiyouxi-com-cn/sitemap.xml

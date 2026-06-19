@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #1e2a3a;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            line-height: 1.8;
+            padding: 2.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* 标题层级 */
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: #0b1c2c;
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            color: #5b6f83;
+            border-left: 3px solid #8ba4bb;
+            padding-left: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 450;
+            margin: 2.2rem 0 0.8rem 0;
+            color: #152b3e;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 450;
+            margin: 1.6rem 0 0.4rem 0;
+            color: #1f3a50;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #2c4054;
+            margin-bottom: 0.9rem;
+        }
+
+        /* 卡片风格：极简留白，无阴影，仅边框 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e9f0;
+            border-radius: 12px;
+            padding: 1.6rem 1.8rem;
+            margin: 1.2rem 0 1.8rem 0;
+        }
+
+        .card ul, .card ol {
+            padding-left: 1.4rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #1d5b8c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0b3d63;
+            text-decoration-thickness: 2px;
+        }
+
+        /* 分隔提示区 */
+        .note-block {
+            background-color: #f4f8fd;
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+            border-left: 5px solid #8ba4bb;
+        }
+
+        .note-block p {
+            margin-bottom: 0.4rem;
+        }
+
+        /* 场景列表特殊强调 */
+        .scenario-item {
+            display: flex;
+            gap: 0.6rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .scenario-item::before {
+            content: "▹";
+            color: #5b7e9c;
+            font-weight: 400;
+        }
+
+        /* FAQ 摘要紧凑 */
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #eaeff5;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #0b1c2c;
+        }
+
+        .faq-a {
+            color: #416179;
+            margin-top: 0.15rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dce4ed;
+            margin: 2.2rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .note-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Hero 区域：站点介绍与定位 -->
+    <div class="hero-title">关于爱游戏 · 一个面向兴趣探索的内容平台</div>
+    <div class="hero-sub">产品说明式 · 站点介绍 · 可信访问指引</div>
+
+    <p>
+        <strong>爱游戏</strong> 并非一个游戏下载库或商业聚合入口，而是一个围绕“电子游戏文化与兴趣”整理的内容索引站。
+        它的定位更接近一种轻量级的信息门户——将分散在网络各处的游戏资讯、测评视角、社区讨论以及玩法分析，
+        以相对结构化的方式重新组织，供读者按需查阅。
+    </p>
+    <p>
+        如果你对某款作品的背景设定、机制演变或玩家生态感兴趣，或许能在 <a href="https://m-portal-aiyouxi.com.cn">爱游戏</a> 找到一条清晰的线索。
+        站点本身不托管游戏文件、不提供破解或修改服务，所有外链均指向合法公开的第三方内容。
+    </p>
+
+    <!-- 产品亮点：以卡片呈现 -->
+    <h2>▎亮点与价值</h2>
+    <div class="card">
+        <ul>
+            <li><strong>主题聚合而非罗列</strong> —— 不以“游戏库”体量取胜，每个条目都有编辑视角的梳理，便于快速理解一款游戏的前后脉络。</li>
+            <li><strong>内容来源多元且标注清晰</strong> —— 引用的资料会标明出处（媒体评测、开发者访谈、玩家考据等），读者可以自行追溯。</li>
+            <li><strong>适合轻度研究与发现</strong> —— 当你对某一类型产生好奇，又不想被算法推荐淹没时，这里提供了一种慢速浏览的可能。</li>
+            <li><strong>持续但克制的更新</strong> —— 内容新增会考虑实质信息增量，而非盲目追逐热点。老游戏或小众作品同样会获得整理。</li>
+        </ul>
+    </div>
+
+    <!-- 使用建议：融入段落承接 -->
+    <h2>▎怎样用好这个站点</h2>
+    <p>
+        你可以把 <strong>爱游戏</strong> 当作一个“兴趣目录”来使用。例如，想了解某款经典 RPG 的版本变迁，
+        或者想梳理某个系列的世界观时间线，站内往往已经做了初步归纳。阅读后可以顺着文末的参考链接继续深入。
+    </p>
+    <p>
+        如果你恰好是游戏开发或研究者，也适合把它作为快速背景调查的工具——一个条目下的信息密度通常高于百科词条，
+        但比专题报道更克制。建议搭配官方社区、开发日志或数字平台一同使用，形成互补的信息获取习惯。
+    </p>
+
+    <!-- 适用场景：用列表样式展示 -->
+    <h2>▎适用场景举例</h2>
+    <div class="card">
+        <div class="scenario-item">想要快速了解一款独立游戏的设计理念与文化背景</div>
+        <div class="scenario-item">回顾某个经典系列时，需要按时间线梳理各代作品的争议与创新</div>
+        <div class="scenario-item">寻找关于“游戏难度设计”或“像素美术风格”等话题的讨论路径</div>
+        <div class="scenario-item">作为备课或写作素材的出发点，获取相对可靠的信息锚点</div>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <h2>▎关于访问与可靠性</h2>
+    <div class="note-block">
+        <p><strong>站点性质：</strong> 爱游戏是一个非商业个人/小团队维护的内容项目，不设付费会员或隐藏内容。
+        所有文章均以署名或引用方式呈现，不包含植入式广告。</p>
+        <p><strong>数据源说明：</strong> 站内所引用的第三方链接（视频、文章、论坛帖子）均取自公开网络。
+        由于外部链接可能变更或失效，我们建议你在 2025 年之后使用本索引时，对关键信息进行交叉验证。</p>
+        <p><strong>隐私与安全：</strong> 本页面所属域名 <code>m-portal-aiyouxi.com.cn</code> 启用 HTTPS，
+        不收集访客个人数据，不设置跟踪脚本。你可以放心浏览。</p>
+    </div>
+
+    <!-- FAQ 摘要 (精选两个) -->
+    <h2>▎常见疑问摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">问：站内会包含所有游戏吗？</div>
+        <div class="faq-a">不会，也没有必要。爱游戏选择收录的标准是：有足够可追溯的公开信息，且能从某个角度提供梳理价值。
+        热门大作与冷门佳作都会出现，但覆盖率远不及综合性维基。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">问：我可以引用站内的内容吗？</div>
+        <div class="faq-a">可以，但建议同时核查原始出处。因为爱游戏本身属于二次整理，直接引用原始资料会更加可靠。
+        若引用本站文字，请注明“根据爱游戏整理”。</div>
+    </div>
+
+    <hr>
+
+    <!-- 结尾再次自然嵌入链接 -->
+    <p style="font-size: 0.95rem; color: #4b627c;">
+        如果你想进一步浏览，可以直接前往 <a href="https://m-portal-aiyouxi.com.cn">爱游戏</a> 首页。
+        当前页面介绍仅作为产品说明参考，站点实际内容以线上版本为准。
+    </p>
+
+</div>
+</body>
+</html>
