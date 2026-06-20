@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门威尼斯人 · 水岸叙事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            background-color: #f6f2eb;
+            color: #2b2b2b;
+            line-height: 1.8;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #fffcf8;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 8px 24px rgba(0,0,0,0.04);
+            padding: 2.5rem 2rem;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.8rem 2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e5ddd3;
+            margin-bottom: 2.8rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        .nav a {
+            color: #4d3e2e;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+            font-weight: 400;
+        }
+
+        .nav a:hover {
+            border-bottom-color: #a68b72;
+        }
+
+        .nav .active {
+            border-bottom: 1px solid #7a624b;
+            color: #3b2e1f;
+        }
+
+        /* Titles */
+        h1 {
+            font-size: 2rem;
+            font-weight: 450;
+            letter-spacing: 1.2px;
+            color: #33281c;
+            line-height: 1.35;
+            margin-bottom: 0.6rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: #3e3225;
+            border-left: 4px solid #c8b49b;
+            padding-left: 1rem;
+            margin: 2.5rem 0 1.2rem 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #4f3d2b;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #5f5242;
+            margin-bottom: 1.8rem;
+            line-height: 1.6;
+        }
+
+        /* Hero intro */
+        .hero-tag {
+            display: inline-block;
+            background: #ede5d9;
+            color: #3f3326;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border-radius: 1px;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            padding: 0.6rem 0;
+        }
+
+        .intro-text a {
+            color: #6a4f34;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b1977c;
+        }
+
+        .intro-text a:hover {
+            color: #3d2b1b;
+            text-decoration-color: #7a5f44;
+        }
+
+        /* Three scene boxes */
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.2rem 0 1.8rem 0;
+        }
+
+        .scene-card {
+            background: #faf6f0;
+            border: 1px solid #e7ddd1;
+            padding: 1.6rem 1.2rem;
+            border-radius: 2px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .scene-card:hover {
+            background: #f7efe6;
+            border-color: #cbb59e;
+        }
+
+        .scene-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+            border-bottom: 1px dashed #d6c8b8;
+            padding-bottom: 0.4rem;
+        }
+
+        .scene-card p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+            line-height: 1.7;
+            color: #3f372d;
+        }
+
+        /* Blockquote / tip */
+        .notice-box {
+            background: #f0ebe2;
+            border-left: 4px solid #b89e82;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 2.2rem 0;
+            font-size: 0.96rem;
+            color: #3b3329;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .notice-box strong {
+            font-weight: 500;
+            color: #2f2318;
+        }
+
+        .notice-box a {
+            color: #5b432c;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 0.5px;
+            text-decoration-color: #b2967b;
+        }
+
+        .notice-box a:hover {
+            color: #2d1f11;
+        }
+
+        /* FAQ summary */
+        .faq-group {
+            margin-top: 1.8rem;
+            padding: 0 0.2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px dashed #e1d6c9;
+            padding: 0.8rem 0;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #3b2c1d;
+            font-size: 0.98rem;
+        }
+
+        .faq-answer {
+            font-size: 0.92rem;
+            color: #524637;
+            margin-top: 0.35rem;
+            line-height: 1.65;
+        }
+
+        .faq-answer a {
+            color: #6b5037;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #bfa88e;
+        }
+
+        /* Divider */
+        .divider {
+            border: none;
+            border-top: 1px solid #e8ddd1;
+            margin: 2.2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 680px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .scene-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .nav {
+                gap: 1rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            .notice-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .nav {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 顶部导航 -->
+    <nav class="nav">
+        <a href="#" class="active">水岸首页</a>
+        <a href="#">空间</a>
+        <a href="#">笔记</a>
+        <a href="#">场域</a>
+        <a href="#">所见</a>
+    </nav>
+
+    <!-- 核心介绍区 -->
+    <span class="hero-tag">· 运河叙事 ·</span>
+    <h1>澳门威尼斯人<br>从水岸到内院</h1>
+    <div class="subhead">
+        一处融合了水域意象与在地日常的复合场域，人们因停留而看见细节。
+    </div>
+
+    <p class="intro-text">
+        在路氹连贯公路一侧，以威尼斯水城为灵感的建筑群已经存在了十余年。抛开标志性的运河与贡多拉，真正令人驻足的，是那些被反复打磨的空间尺度——拱廊下的阴影、石板路转角的喷泉、以及大堂里从不熄灭的暖光。 
+        <a href="https://site-venetian.com">澳门威尼斯人</a>并非简单的异地复制，它更像一座关于“水岸生活”的长期提案：让室内也能拥有黄昏时分的巷弄与风。
+    </p>
+
+    <p>
+        很多访客第一次抵达时，会被头顶的蓝天穹顶吸引。但如果你愿意在侧廊的咖啡馆多坐一会儿，会发现光影在四小时内缓慢移动，墙面上的浮雕在不同角度下显现出不同的层次。这种细腻，是反复推敲后的克制。
+    </p>
+
+    <!-- 三个场景模块 -->
+    <h2>三处日常切片</h2>
+    <div class="scene-grid">
+        <div class="scene-card">
+            <h3>拱廊 · 晨间</h3>
+            <p>店铺尚未完全开门，石英砖地面被清洁车拖出一道水痕。穿制服的工作人员推着工具车穿过长廊，步伐不快不慢。拱顶把回声拉长，像一座没有钟声的钟楼。</p>
+        </div>
+        <div class="scene-card">
+            <h3>运河 · 午后</h3>
+            <p>贡多拉船夫偶尔会哼一段意大利民谣，歌声在水面与石桥之间折返。两岸的游人或走或停，没有人催促。水很慢，像一段被故意放慢的录像带。</p>
+        </div>
+        <div class="scene-card">
+            <h3>中庭 · 入夜</h3>
+            <p>灯光从穹顶边缘往下渗，不刺眼，刚好勾勒出柱廊的轮廓。旅客散坐在大理石台阶上，有人在看手机，有人在发呆。这里是整座建筑里最像“广场”的地方。</p>
+        </div>
+    </div>
+
+    <!-- 引用块 / 提示框 -->
+    <div class="notice-box">
+        <strong>一个观察</strong>：<a href="https://site-venetian.com">澳门威尼斯人</a> 的室内设计尽量避免出现直角转角。几乎所有走廊的尽头都以弧墙或壁龛收束，这种处理让视线始终有落脚点，而不是撞上一面死墙。如果你下次路过，可以留意一下。
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <h2>常见说明</h2>
+    <div class="faq-group">
+        <div class="faq-item">
+            <div class="faq-question">这里的“威尼斯”是原样复刻吗？</div>
+            <div class="faq-answer">并非考古式复刻。建筑师提取了威尼斯城市中几个典型元素——拱廊、水巷、广场——然后用当代材料和尺度重新组织。你看到的石头是仿石灰岩，但触感和色温经过了十几轮打样。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">运河里的水是循环的吗？</div>
+            <div class="faq-answer">是的，水系统采用封闭循环过滤，水质维持在可观赏的标准。河道深度约一米，底部涂了深蓝色涂层以增强视觉深度。贡多拉行经时，船桨会带起细碎的水声，这声音也是设计的一部分。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">最适合参观的时间段？</div>
+            <div class="faq-answer">如果希望人少一些，建议工作日上午十点前。此时旅行团尚未大量抵达，光线从东侧穹顶倾斜射入，走廊里有长长的影子。傍晚六点后灯光转暖，适合观察空间氛围的变化。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">这里更偏向购物还是游览？</div>
+            <div class="faq-answer">两者兼有，但动线设计上更鼓励漫游。店铺之间穿插着休息区、小型广场和景观节点，即使不消费也可以走完全程。很多本地居民会把它当作散步路线，穿过中庭从东翼走到西翼，全程有顶棚遮蔽。</div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <p style="font-size: 0.88rem; color: #6f5f4b; margin-bottom: 0;">
+        页面内容基于现场观察与公开资料整理。关于建筑与空间的更多描述，可以参考 
+        <a href="https://site-venetian.com" style="color: #6f5f4b; text-decoration: underline; text-underline-offset: 2px;">澳门威尼斯人</a> 的官方信息。
+    </p>
+</div>
+</body>
+</html>
