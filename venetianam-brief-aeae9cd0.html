@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威尼斯人杂志 · 澳门 · 再次探访</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6f1eb;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 2.5rem auto;
+            background-color: #fcfaf7;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+            padding: 2rem 2.5rem 3rem;
+            border-radius: 4px;
+        }
+
+        /* 首页横幅 */
+        .hero {
+            border-bottom: 1px solid #e1d9cf;
+            padding-bottom: 2rem;
+            margin-bottom: 2.2rem;
+            text-align: center;
+        }
+
+        .hero .label {
+            display: inline-block;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #9c8f7e;
+            border: 1px solid #d6ccc1;
+            padding: 0.2rem 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #3e352c;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-style: italic;
+            color: #7b6e5e;
+            font-size: 1rem;
+            border-top: 1px dotted #ddd3c8;
+            display: inline-block;
+            padding-top: 0.7rem;
+        }
+
+        /* 正文段落 */
+        .story p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+            font-size: 1rem;
+        }
+
+        .story p.no-indent {
+            text-indent: 0;
+        }
+
+        .story .intro-quote {
+            background: #f0eae2;
+            padding: 1.2rem 1.8rem;
+            border-left: 4px solid #b7a38d;
+            margin: 1.8rem 0;
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #3f362e;
+            border-radius: 0 8px 8px 0;
+            text-indent: 0;
+        }
+
+        .story .intro-quote strong {
+            font-weight: 600;
+            color: #4d3f30;
+        }
+
+        .story .inset-note {
+            background: #f6f1eb;
+            padding: 1rem 1.5rem;
+            border-radius: 20px 4px 20px 4px;
+            margin: 1.8rem 0;
+            font-size: 0.95rem;
+            border: 1px solid #e2d7cc;
+            text-indent: 0;
+        }
+
+        .story .inset-note::before {
+            content: "— 备忘 · ";
+            color: #9c8c79;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .story .signature-link {
+            background: #fffcf8;
+            border: 1px solid #dacfc3;
+            padding: 0.4rem 1rem 0.4rem 1.2rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0.2rem 0 0.2rem 0.2rem;
+        }
+
+        .story a {
+            color: #6d5c47;
+            text-decoration: none;
+            border-bottom: 1px solid #cbb9a6;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .story a:hover {
+            color: #3f2f1f;
+            border-bottom-color: #7d6853;
+        }
+
+        /* 特点/场景短栏 (杂志卡片变体) */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.2rem 0 1.8rem;
+            border-top: 1px solid #e7ddd2;
+            border-bottom: 1px solid #e7ddd2;
+            padding: 1.8rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 160px;
+            background: #faf6f0;
+            padding: 1rem 1rem 0.8rem 1rem;
+            border-radius: 0;
+            border-left: 3px solid #d2bfac;
+        }
+
+        .feature-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #4b3f32;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #4a4138;
+            text-indent: 0;
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要块 */
+        .faq-summary {
+            margin: 2rem 0 1.2rem;
+            background: #f3ede6;
+            padding: 0.8rem 1.8rem 1.5rem;
+            border-radius: 4px;
+            border: 1px solid #ded3c6;
+        }
+
+        .faq-summary h4 {
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #7d6c59;
+            border-bottom: 1px dashed #cfc0af;
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-summary dl {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.2rem 1.2rem;
+        }
+
+        .faq-summary dt {
+            flex: 0 0 5rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #5f5343;
+        }
+
+        .faq-summary dd {
+            flex: 1 1 180px;
+            font-size: 0.85rem;
+            color: #50463b;
+            margin-bottom: 0.4rem;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0d5c9;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7c6f5d;
+        }
+
+        .footer-note .return-reminder {
+            background: #efebe5;
+            padding: 0.6rem 1.2rem;
+            display: inline-block;
+            border-radius: 40px;
+            font-style: italic;
+            letter-spacing: 0.3px;
+            color: #4d4134;
+        }
+
+        .footer-note small {
+            display: block;
+            margin-top: 1.2rem;
+            color: #b0a494;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .page {
+                padding: 1.5rem 1.2rem;
+                margin: 1.2rem auto;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .feature-grid {
+                flex-direction: column;
+            }
+
+            .faq-summary dl {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 首页横幅 -->
+        <div class="hero">
+            <span class="label">杂志式 · 重访</span>
+            <h1>澳门威尼斯人 · 再发现</h1>
+            <div class="sub">水城轮廓 · 收藏一段旅途</div>
+        </div>
+
+        <!-- 三段式自然介绍 + 穿插内容 -->
+        <div class="story">
+            <p class="no-indent">
+                隔了一段时间，又想起澳门那个光线柔和的午后。不是初见的雀跃，而是某种安静的回归欲。
+                上一次离开时，我把一张印着拱桥的明信片夹进书里，后来再翻开，忽然决定再去看看那座
+                室内运河与穹顶交织的城——<a href="https://venetianam.com">澳门威尼斯人</a>。
+                它似乎总在同样的位置，以同样的水光迎接不同时刻的你。
+            </p>
+
+            <div class="intro-quote">
+                <strong>缓慢的复访</strong> · 威尼斯的影子落在澳门的海风里。圣马可广场的钟楼复刻了
+                意大利的某段时光，而运河上的贡多拉船夫，依然会唱起那首听不太懂却动人的歌。
+                有人是为了购物，有人是为了看展，而我只是想再次站在那幅巨大的天幕画下，
+                体会一种被虚构的永恒包围的奇妙。
+            </div>
+
+            <p>
+                从酒店大堂穿往购物中心，每一步都踩在柔软的“历史”上——当然，这里的“历史”只有十几年，
+                但它认真模仿了文艺复兴的砖石与拱廊。第二次去，我开始注意到细节：桥栏上的雕刻、
+                壁画里云朵的笔触、甚至地板拼接的纹路。那些上次匆匆掠过的事物，原来藏着许多耐心。
+                就像一本杂志的专题，翻到第二遍才读懂了编者埋下的线索。
+            </p>
+
+            <!-- 场景短卡（特点变体） -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>运河 · 再次漂流</h3>
+                    <p>这次选了黄昏的时段，金色的灯光映在水面，贡多拉的摇摆变得很慢。船夫偶尔哼几句，整个商场都静下来。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>穹顶 · 天光幻觉</h3>
+                    <p>无论外面阴晴，室内拱廊永远是“威尼斯蓝天”。第二次看，反而更相信那片云是画上去的——但它美得令人安心。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>收藏 · 下次再用</h3>
+                    <p>在纪念品店挑了一枚面具冰箱贴，还有一本水城素描册。不是第一次买的那些，而是更轻、更便携的版本。</p>
+                </div>
+            </div>
+
+            <div class="inset-note">
+                如果你也曾经去过，或许会发现：第二次踏进同一条走廊时，那些壁画、咖啡座和叹息桥的复制品，
+                会从“好看”变成“耐看”。<a href="https://venetianam.com" style="border-bottom: none; background: transparent; padding: 0;">澳门威尼斯人</a>像一本可以反复翻的旅行杂志，
+                每次都有折页等待被你重新打开。
+            </div>
+
+            <p>
+                回程时我在想，一个地方之所以值得被放进收藏夹，未必因为它永远新鲜，而是因为它足够恒定——
+                你可以放心地把某段记忆寄存在那里。下次去澳门，大概还会再散步到运河边，
+                要一杯没有酒精的饮品，看着人造的星空慢慢亮起来。这或许就是“持续关注”最温柔的形式：
+                不是追赶，而是归来。
+            </p>
+
+            <!-- FAQ 摘要 -->
+            <div class="faq-summary">
+                <h4>✦ 简短备忘 · 关于威尼斯人</h4>
+                <dl>
+                    <dt>位置</dt>
+                    <dd>澳门路氹金光大道，毗邻多间度假酒店</dd>
+                    <dt>亮点</dt>
+                    <dd>室内运河、贡多拉体验、四季名店、虚拟天幕</dd>
+                    <dt>适合</dt>
+                    <dd>家庭出行、情侣漫步、独自漫游、摄影爱好者</dd>
+                    <dt>小提醒</dt>
+                    <dd>平日上午人较少，适合再次细细品味</dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-note">
+            <div class="return-reminder">
+                ✦ 收藏页码 · 可再次翻阅 ✦
+            </div>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem; text-indent: 0;">
+                保留这份印象，下次到访澳门，不妨把这里当作一个熟悉的坐标。
+            </p>
+            <small>— 杂志式特辑 · 重访澳门威尼斯人 —</small>
+        </div>
+    </div>
+</body>
+</html>
